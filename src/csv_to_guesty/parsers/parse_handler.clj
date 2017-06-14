@@ -26,11 +26,7 @@
                             :to (parse-sheet-date (get currentData (get-date-column)))
                             :listingId accountID
                             :price (get currentData accountID) }]
-        (recur (rest data) (inc iterator) (conj result currentResult ))
-        )
-      )
-    )
-  )
+        (recur (rest data) (inc iterator) (conj result currentResult))))))
 
 (defn prepare-data-for-api [filepath]
   (let [data (parser/get-formatted-data filepath)
@@ -38,8 +34,4 @@
     (loop [accounts accounts iterator 0 result []]
       (if (empty? accounts)
         result
-        (recur (rest accounts) (inc iterator) (conj result  (get-account-prices data (first accounts)) ) )
-        )
-      )
-    )
-  )
+        (recur (rest accounts) (inc iterator) (conj result  (get-account-prices data (first accounts))))))))
