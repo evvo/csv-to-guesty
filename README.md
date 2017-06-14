@@ -1,6 +1,6 @@
 # csv-to-guesty
 
-Web application written in Clojure, that allows bulk updating of property prices by dates for Guesty (using the Guesty API) using CSV file.
+Web application written in Clojure, that allows bulk updating of property prices by dates for Guesty (using the Guesty API) with a CSV file.
 The uploaded CSV file must contain a single "Date" column and at least one column,
 which name is a property ID (the CSV could contain more than one property ID).
 
