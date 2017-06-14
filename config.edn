@@ -1,0 +1,9 @@
+{ :environment "production"
+  :upload_directory "files"
+  :port 9998
+  :api {:api_key "api-key-here"
+       :api_secret "api-secret-here"
+       :main_url "https://superhostuser.herokuapp.com/api/v2"}
+  :users [{:username "admin" :password "secret"
+                    :roles #{:staff/admin}}]
+  }
